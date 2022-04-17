@@ -46,6 +46,7 @@ pred_tr = model.predict(xtrain)
 ytest['pred_profit'] = pred_ts
 ytrain["pred_profit"] = pred_tr
 
+# Calculating Error
 from sklearn.metrics import mean_absolute_error
 ts_err = mean_absolute_error(ytest['PROFIT'],ytest['pred_profit'])
 tr_err = mean_absolute_error(ytrain['PROFIT'],ytrain['pred_profit'])
